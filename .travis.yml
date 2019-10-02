@@ -1,8 +1,15 @@
 language: java
 jdk:
   - oraclejdk9
+
+env:
+  - NODE_VERSION="--lts"
+
 before_install:
+  - nvm install $NODE_VERSION
   - chmod +x gradlew
   - chmod +x gradle/wrapper/gradle-wrapper.jar
 script:
   - ./gradlew test build
+  - npm install
+  - npx danger ci
