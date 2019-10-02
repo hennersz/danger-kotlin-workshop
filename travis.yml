@@ -1,8 +1,7 @@
 language: java
 jdk:
-  - oraclejdk8
+  - oraclejdk9
 before_install:
   - chmod +x gradlew
-  - chmod +x gradle/wrapper/gradle-wrapper.jar
-  script:
+ script:
     - ./gradlew test build
