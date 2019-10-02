@@ -4,4 +4,5 @@ jdk:
 before_install:
   - chmod +x gradlew
 script:
+  - gradle wrapper
   - ./gradlew test build
